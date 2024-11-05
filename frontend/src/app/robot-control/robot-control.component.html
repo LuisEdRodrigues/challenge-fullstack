@@ -1,0 +1,10 @@
+<div class="dashboard">
+    <h1>Insira os Movimentos</h1>
+    <p class="guia">M = Movimentar para frente; R = Virar à direita; L = Virar à esquerda</p>
+    <input class="input" type="text" required [(ngModel)]="moves" placeholder="Digite aqui...">
+    <button (click)="onMove()" [disabled]="!moves">Enviar movimentos</button>
+    <h3>Coordenadas do robô:</h3>
+    @if (response) {       
+        <p>{{response}}</p>
+    }
+</div>
